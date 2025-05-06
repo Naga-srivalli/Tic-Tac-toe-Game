@@ -1,0 +1,159 @@
+*{
+  margin :0;
+  padding: 0;
+}
+
+body{
+  background-color: #9BB291;
+  text-align: center;
+}
+
+.container{
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Game{
+  height: 60vmin;
+  width: 60vmin;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5vmin;
+  
+
+}
+
+.box{
+  height: 18vmin;
+  width: 18vmin;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.6);
+  font-size: 8vmin;
+  background-color: #E1F0F4;
+}
+
+.reset{
+  padding: 1rem;
+  font-size: 1.25rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: rgb(44, 42, 42);
+  color: #d4dee1;
+}
+
+.New{
+  padding: 1rem;
+  font-size: 1.25rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: rgb(44, 42, 42);
+  color: #c2cfd3;
+}
+
+#mes{
+  color: #C7FFDA;
+  font-size: 8vmin;
+
+}
+
+.msg{
+  height: 100vmin;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.hide{
+  display: none;
+}
+
+
+/* Color for X */
+.box.X {
+  color:#9c7bbc; /* Red or any other color */
+}
+
+/* Color for O */
+.box.O {
+  color: #76b5c7;
+}
+
+
+.scoreboard {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.scoreboard p {
+  margin: 5px 0;
+}
+
+/* Winning cells animation */
+@keyframes winningAnimation {
+  0% {
+      background-color: transparent;
+      transform: scale(1);
+  }
+  50% {
+      background-color: #FFD700; /* Gold color */
+      transform: scale(1.2); /* Scale up */
+  }
+  100% {
+      background-color: #32CD32; /* Green color */
+      transform: scale(1);
+  }
+}
+
+.winning {
+  animation: winningAnimation 1s ease-out;
+  border: 2px solid #FF6347; /* Orange border */
+}
+
+
+
+.reset:hover {
+  background: linear-gradient(145deg, #3a3a3a, #2c2c2c);
+  transform: scale(1.05);
+  color: #00ffd5;
+}
+
+.New:hover {
+  background: linear-gradient(145deg, #3a3a3a, #2c2c2c);
+  transform: scale(1.05);
+  color: #00ffd5;
+}
+
+
+#username-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#username {
+  padding: 10px;
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+#submit-username {
+  padding: 10px;
+  font-size: 1.2rem;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#game-container {
+  display: none; /* Initially hidden, shown after username submission */
+}
+
